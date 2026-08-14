@@ -183,4 +183,4 @@ path = os.path.join(FIGDIR, "03_event_study.png")
 plt.savefig(path, dpi=140)
 print(f"\nchart written to {path}")
 
-print("\n\nDone. Send me this output and the chart.")
+print("\n\nDone.")

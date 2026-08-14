@@ -150,4 +150,4 @@ print(f"\nchart written to {path}")
 pd.concat(collected).to_csv("data/processed/event_study.csv", index=False)
 print("coefficients written to data/processed/event_study.csv")
 
-print("\n\nDone. Send me this output and the chart.")
+print("\n\nDone.")

@@ -232,4 +232,4 @@ pd.DataFrame({
 }).to_csv("data/processed/power_curve.csv", index=False)
 print("power curve written to data/processed/power_curve.csv")
 
-print("\n\nDone. Send me this output and the chart.")
+print("\n\nDone.")

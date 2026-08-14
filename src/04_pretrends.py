@@ -161,4 +161,4 @@ path2 = os.path.join(FIGDIR, "02_gap.png")
 plt.savefig(path2, dpi=140)
 print(f"chart written to {path2}")
 
-print("\n\nDone. Send me this output and both charts.")
+print("\n\nDone.")

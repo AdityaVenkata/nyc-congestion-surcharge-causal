@@ -87,4 +87,4 @@ if __name__ == "__main__":
     for fname in FILES:
         inspect(download(fname))
     inspect_lookup()
-    print("\n\nDone. Send me this output.")
+    print("\n\nDone.")

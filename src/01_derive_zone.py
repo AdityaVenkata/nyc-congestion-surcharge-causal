@@ -178,4 +178,4 @@ if zone_ids:
     """).df().to_string(index=False))
 
 con.close()
-print("\n\nDone. Send me this output.")
+print("\n\nDone.")

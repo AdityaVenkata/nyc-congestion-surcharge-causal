@@ -173,4 +173,4 @@ for metric, _ in METRICS:
 out.to_csv("data/processed/date_placebo.csv", index=False)
 print("estimates written to data/processed/date_placebo.csv")
 
-print("\n\nDone. Send me this output and the chart.")
+print("\n\nDone.")

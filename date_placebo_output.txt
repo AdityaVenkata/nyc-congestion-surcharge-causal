@@ -47,4 +47,4 @@ chart written to figures/06_date_placebo.png
 estimates written to data/processed/date_placebo.csv
 
 
-Done. Send me this output and the chart.
+Done.

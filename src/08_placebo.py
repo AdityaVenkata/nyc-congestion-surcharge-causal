@@ -186,4 +186,4 @@ print(f"\nchart written to {path}")
 pd.DataFrame({"placebo_estimate": placebos}).to_csv(
     "data/processed/placebo_draws.csv", index=False)
 
-print("\n\nDone. Send me this output and the chart.")
+print("\n\nDone.")

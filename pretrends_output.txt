@@ -55,4 +55,4 @@ chart written to figures/01_pretrends.png
 chart written to figures/02_gap.png
 
 
-Done. Send me this output and both charts.
+Done.
