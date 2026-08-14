@@ -1,0 +1,101 @@
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.4' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/numpy/core/fromnumeric.py:3504: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/numpy/core/fromnumeric.py:3504: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/numpy/core/fromnumeric.py:3504: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/numpy/core/fromnumeric.py:3504: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+==============================================================================
+DIFFERENCE-IN-DIFFERENCES ESTIMATES
+standard errors clustered by zone
+==============================================================================
+
+border ring: 9 zones (5 treated, 4 control), 2,187 zone-days
+
+------------------------------------------------------------------------------
+Share of trips under 1 mile
+------------------------------------------------------------------------------
+  (A) naive TWFE           -0.01271  se 0.00249  [-0.01759, -0.00783]  p=0.0000 ***
+  (B) + group trends       -0.01225  se 0.00532  [-0.02267, -0.00183]  p=0.0212 **
+  (C) border ring          -0.01951  se 0.00561  [-0.03050, -0.00851]  p=0.0005 ***
+
+------------------------------------------------------------------------------
+Mean trip distance (miles)
+------------------------------------------------------------------------------
+  (A) naive TWFE           +0.10507  se 0.04060  [+0.02550, +0.18465]  p=0.0097 ***
+  (B) + group trends       -0.00484  se 0.03129  [-0.06616, +0.05648]  p=0.8770 
+  (C) border ring          +0.03099  se 0.03807  [-0.04363, +0.10561]  p=0.4156 
+
+------------------------------------------------------------------------------
+Log daily trips
+------------------------------------------------------------------------------
+  (A) naive TWFE           -0.05785  se 0.01592  [-0.08906, -0.02665]  p=0.0003 ***
+  (B) + group trends       +0.01386  se 0.01617  [-0.01783, +0.04554]  p=0.3913 
+  (C) border ring          -0.09824  se 0.02435  [-0.14596, -0.05051]  p=0.0001 ***
+  preferred spec (B) as percent: +1.40%
+
+------------------------------------------------------------------------------
+Tip rate (corrected base)
+------------------------------------------------------------------------------
+  (A) naive TWFE           -0.00570  se 0.00107  [-0.00780, -0.00359]  p=0.0000 ***
+  (B) + group trends       -0.00325  se 0.00165  [-0.00648, -0.00002]  p=0.0485 **
+  (C) border ring          -0.00478  se 0.00294  [-0.01054, +0.00098]  p=0.1039 
+
+==============================================================================
+SUMMARY
+==============================================================================
+                    outcome               spec     coef      se       p       lo       hi
+Share of trips under 1 mile     (A) naive TWFE -0.01271 0.00249 0.00000 -0.01759 -0.00783
+Share of trips under 1 mile (B) + group trends -0.01225 0.00532 0.02124 -0.02267 -0.00183
+Share of trips under 1 mile    (C) border ring -0.01951 0.00561 0.00051 -0.03050 -0.00851
+ Mean trip distance (miles)     (A) naive TWFE  0.10507 0.04060 0.00965  0.02550  0.18465
+ Mean trip distance (miles) (B) + group trends -0.00484 0.03129 0.87703 -0.06616  0.05648
+ Mean trip distance (miles)    (C) border ring  0.03099 0.03807 0.41565 -0.04363  0.10561
+            Log daily trips     (A) naive TWFE -0.05785 0.01592 0.00028 -0.08906 -0.02665
+            Log daily trips (B) + group trends  0.01386 0.01617 0.39134 -0.01783  0.04554
+            Log daily trips    (C) border ring -0.09824 0.02435 0.00005 -0.14596 -0.05051
+  Tip rate (corrected base)     (A) naive TWFE -0.00570 0.00107 0.00000 -0.00780 -0.00359
+  Tip rate (corrected base) (B) + group trends -0.00325 0.00165 0.04853 -0.00648 -0.00002
+  Tip rate (corrected base)    (C) border ring -0.00478 0.00294 0.10392 -0.01054  0.00098
+
+==============================================================================
+EVENT STUDY
+==============================================================================
+
+Share of trips under 1 mile
+  mean pre-period coefficient:  +nan
+  mean post-period coefficient: +nan
+  break at treatment:           +nan
+
+Mean trip distance (miles)
+  mean pre-period coefficient:  +nan
+  mean post-period coefficient: +nan
+  break at treatment:           +nan
+
+Log daily trips
+  mean pre-period coefficient:  +nan
+  mean post-period coefficient: +nan
+  break at treatment:           +nan
+
+Tip rate (corrected base)
+  mean pre-period coefficient:  +nan
+  mean post-period coefficient: +nan
+  break at treatment:           +nan
+
+chart written to figures/03_event_study.png
+
+
+Done. Send me this output and the chart.

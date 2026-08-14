@@ -1,0 +1,63 @@
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.4' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+==========================================================================
+BASELINE (pre-period, zone-day level)
+==========================================================================
+metric:                  share_short_trips
+zone-days available:     6,944
+zones:                   56  ->  28 per arm per day
+mean:                    0.27147
+standard deviation:      0.07329
+
+==========================================================================
+CUPED VARIANCE REDUCTION
+==========================================================================
+correlation(pre, post):  +0.9180
+theta:                   1.02112
+sd without CUPED:        0.07402
+sd with CUPED:           0.02936
+variance reduction:      84.3%
+mean unchanged:          0.27716 -> 0.27716
+
+CUPED works here because a zone's past behaviour predicts its future
+behaviour. The correlation above is what makes the technique pay off;
+a weak correlation would leave the variance untouched.
+
+==========================================================================
+MINIMUM DETECTABLE EFFECT  (alpha=0.05, power=80%)
+==========================================================================
+  days    n/arm    MDE plain    MDE CUPED
+     7      196      0.02095      0.00831
+    14      392      0.01481      0.00588
+    21      588      0.01209      0.00480
+    28      784      0.01047      0.00415
+    42    1,176      0.00855      0.00339
+    60    1,680      0.00716      0.00284
+    90    2,520      0.00584      0.00232
+
+To detect the effect we actually observed (0.0127):
+  without CUPED:  19.0 days
+  with CUPED:     3.0 days
+  saving:         16.0 days (84% shorter)
+
+==========================================================================
+PEEKING SIMULATION  (10,000 experiments, true effect = 0)
+==========================================================================
+test once at day 28:               false positive rate 4.64%
+test daily from day 3 and stop early: false positive rate 23.68%
+inflation factor:                     5.1x
+
+false positive rate by number of looks allowed:
+    1 look(s): 5.01%
+    2 look(s): 9.25%
+    5 look(s): 15.40%
+   10 look(s): 19.54%
+   26 look(s): 23.68%
+
+chart written to figures/04_experiment_design.png
+power curve written to data/processed/power_curve.csv
+
+
+Done. Send me this output and the chart.

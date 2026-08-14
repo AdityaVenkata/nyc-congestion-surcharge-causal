@@ -1,0 +1,58 @@
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.4' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+========================================================================
+PRE-PERIOD
+========================================================================
+dates:      2018-10-01 to 2019-02-01
+zone-days:  6,944
+zones:      56  (48 treated, 8 control)
+
+========================================================================
+FORMAL PARALLEL TRENDS TEST (pre-period only)
+interaction term = difference in slope between the two groups
+========================================================================
+
+Log daily trips
+  slope difference per week: -0.006328
+  std error (clustered):     0.001374
+  95% CI:                    [-0.009022, -0.003634]
+  p-value:                   0.0000
+  verdict:                   FAILS - groups already diverging
+
+Mean trip distance (miles)
+  slope difference per week: +0.004615
+  std error (clustered):     0.003469
+  95% CI:                    [-0.002184, +0.011415]
+  p-value:                   0.1834
+  verdict:                   holds
+
+Share of trips under 1 mile
+  slope difference per week: +0.000383
+  std error (clustered):     0.000182
+  95% CI:                    [+0.000026, +0.000741]
+  p-value:                   0.0356
+  verdict:                   FAILS - groups already diverging
+
+Tip rate (corrected base)
+  slope difference per week: +0.000432
+  std error (clustered):     0.000142
+  95% CI:                    [+0.000153, +0.000711]
+  p-value:                   0.0024
+  verdict:                   FAILS - groups already diverging
+
+========================================================================
+SUMMARY
+========================================================================
+                    outcome  slope_diff  std_err  p_value                          verdict
+            Log daily trips   -0.006328 0.001374 0.000004 FAILS - groups already diverging
+ Mean trip distance (miles)    0.004615 0.003469 0.183421                            holds
+Share of trips under 1 mile    0.000383 0.000182 0.035551 FAILS - groups already diverging
+  Tip rate (corrected base)    0.000432 0.000142 0.002439 FAILS - groups already diverging
+
+chart written to figures/01_pretrends.png
+chart written to figures/02_gap.png
+
+
+Done. Send me this output and both charts.

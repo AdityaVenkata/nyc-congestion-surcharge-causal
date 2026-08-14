@@ -1,0 +1,108 @@
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.4' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+============================================================
+DOWNLOADING
+============================================================
+
+============================================================
+CLEANING (cumulative survivors after each filter)
+============================================================
+
+2018-10
+  raw rows                  8,834,520
+  in nominal month          8,834,151   (-369)
+  standard rate             8,530,302   (-303,849)
+  not airport               8,093,260   (-437,042)
+  distance sane             8,055,840   (-37,420)
+  fare positive             8,051,118   (-4,722)
+  surcharge not negative    8,051,118   (-0)
+  duration sane             8,012,007   (-39,111)
+
+2018-11
+  raw rows                  8,155,449
+  in nominal month          8,155,025   (-424)
+  standard rate             7,886,465   (-268,560)
+  not airport               7,488,020   (-398,445)
+  distance sane             7,455,214   (-32,806)
+  fare positive             7,450,604   (-4,610)
+  surcharge not negative    7,450,604   (-0)
+  duration sane             7,410,168   (-40,436)
+
+2018-12
+  raw rows                  8,195,675
+  in nominal month          8,194,756   (-919)
+  standard rate             7,917,111   (-277,645)
+  not airport               7,547,008   (-370,103)
+  distance sane             7,512,120   (-34,888)
+  fare positive             7,506,824   (-5,296)
+  surcharge not negative    7,506,824   (-0)
+  duration sane             7,464,459   (-42,365)
+
+2019-01
+  raw rows                  7,696,617
+  in nominal month          7,696,080   (-537)
+  standard rate             7,429,773   (-266,307)
+  not airport               7,099,649   (-330,124)
+  distance sane             7,069,001   (-30,648)
+  fare positive             7,063,955   (-5,046)
+  surcharge not negative    7,063,955   (-0)
+  duration sane             7,025,175   (-38,780)
+
+2019-02
+  raw rows                  7,049,370
+  in nominal month          7,048,744   (-626)
+  standard rate             6,791,693   (-257,051)
+  not airport               6,476,466   (-315,227)
+  distance sane             6,447,239   (-29,227)
+  fare positive             6,439,964   (-7,275)
+  surcharge not negative    6,439,964   (-0)
+  duration sane             6,406,487   (-33,477)
+
+2019-03
+  raw rows                  7,866,620
+  in nominal month          7,866,110   (-510)
+  standard rate             7,552,517   (-313,593)
+  not airport               7,165,525   (-386,992)
+  distance sane             7,136,800   (-28,725)
+  fare positive             7,127,736   (-9,064)
+  surcharge not negative    7,127,736   (-0)
+  duration sane             7,092,571   (-35,165)
+
+2019-04
+  raw rows                  7,475,949
+  in nominal month          7,475,636   (-313)
+  standard rate             7,178,246   (-297,390)
+  not airport               6,807,343   (-370,903)
+  distance sane             6,780,408   (-26,935)
+  fare positive             6,771,402   (-9,006)
+  surcharge not negative    6,771,402   (-0)
+  duration sane             6,739,156   (-32,246)
+
+2019-05
+  raw rows                  7,598,445
+  in nominal month          7,598,068   (-377)
+  standard rate             7,298,790   (-299,278)
+  not airport               6,894,769   (-404,021)
+  distance sane             6,865,002   (-29,767)
+  fare positive             6,855,159   (-9,843)
+  surcharge not negative    6,855,159   (-0)
+  duration sane             6,822,359   (-32,800)
+
+============================================================
+RESULT
+============================================================
+clean rows across all months: 56,972,382
+written to data/processed/trips_clean.parquet  (795 MB)
+
+rows per month:
+  month  n_trips  avg_distance  avg_fare
+2018-10  8012007          2.16     11.03
+2018-11  7410168          2.12     11.01
+2018-12  7464459          2.14     10.88
+2019-01  7025175          2.06     10.15
+2019-02  6406487          2.11     10.39
+2019-03  7092571          2.15     10.55
+2019-04  6739156          2.15     10.66
+2019-05  6822359          2.15     10.79

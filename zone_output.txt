@@ -1,0 +1,163 @@
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.4' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+========================================================================
+DATE FILTER
+========================================================================
+raw rows:           7,866,620
+in March 2019:      7,866,110
+dropped:            510  (0.0065%)
+
+========================================================================
+SURCHARGE VALUES
+========================================================================
+ value  n_trips   pct
+  2.50  7154131 90.95
+  0.00   671159  8.53
+   NaN    33474  0.43
+ -2.50     7124  0.09
+  0.75      215  0.00
+  2.75        4  0.00
+  4.50        2  0.00
+  1.50        1  0.00
+
+========================================================================
+DISTRIBUTION OF CHARGE RATE ACROSS ZONES
+(looking for a clean gap that separates inside from outside)
+========================================================================
+          band  n_zones   n_trips
+a. 0.95 - 1.00       46 6645774.0
+b. 0.80 - 0.95        3  176521.0
+c. 0.50 - 0.80        6  365218.0
+d. 0.20 - 0.50       31  522897.0
+e. 0.00 - 0.20       53   97507.0
+
+========================================================================
+ALL MANHATTAN ZONES BY CHARGE RATE
+========================================================================
+ location_id                      zone_name service_zone  n_trips  share_charged
+         249                   West Village  Yellow Zone   158728         0.9925
+         237          Upper East Side South  Yellow Zone   311537         0.9922
+         114        Greenwich Village South  Yellow Zone   104977         0.9921
+         211                           SoHo  Yellow Zone    62233         0.9917
+         158  Meatpacking/West Village West  Yellow Zone    81097         0.9914
+         234                       Union Sq  Yellow Zone   248227         0.9912
+          79                   East Village  Yellow Zone   212977         0.9911
+         186   Penn Station/Madison Sq West  Yellow Zone   278122         0.9910
+         239          Upper West Side South  Yellow Zone   197703         0.9906
+         162                   Midtown East  Yellow Zone   285756         0.9901
+         246      West Chelsea/Hudson Yards  Yellow Zone   120736         0.9899
+         141                Lenox Hill West  Yellow Zone   178815         0.9898
+         142            Lincoln Square East  Yellow Zone   229617         0.9897
+         144            Little Italy/NoLiTa  Yellow Zone    77070         0.9897
+         229  Sutton Place/Turtle Bay North  Yellow Zone   145151         0.9894
+         161                 Midtown Center  Yellow Zone   328039         0.9891
+         113        Greenwich Village North  Yellow Zone   121400         0.9891
+         148                Lower East Side  Yellow Zone   102146         0.9888
+         262                 Yorkville East  Yellow Zone    90106         0.9886
+         163                  Midtown North  Yellow Zone   209039         0.9879
+         164                  Midtown South  Yellow Zone   187522         0.9876
+         100               Garment District  Yellow Zone   162707         0.9872
+         236          Upper East Side North  Yellow Zone   282733         0.9870
+          12                   Battery Park  Yellow Zone     2549         0.9867
+          13              Battery Park City  Yellow Zone    66460         0.9866
+          48                   Clinton East  Yellow Zone   256010         0.9864
+         170                    Murray Hill  Yellow Zone   243252         0.9862
+          68                   East Chelsea  Yellow Zone   195681         0.9861
+         230      Times Sq/Theatre District  Yellow Zone   278799         0.9860
+         107                       Gramercy  Yellow Zone   180810         0.9858
+         233            UN/Turtle Bay South  Yellow Zone   104697         0.9855
+          90                       Flatiron  Yellow Zone   143157         0.9847
+         125                      Hudson Sq  Yellow Zone    46359         0.9843
+          50                   Clinton West  Yellow Zone    73934         0.9838
+         143            Lincoln Square West  Yellow Zone    90033         0.9824
+         140                Lenox Hill East  Yellow Zone   136244         0.9789
+         231           TriBeCa/Civic Center  Yellow Zone   130846         0.9789
+         263                 Yorkville West  Yellow Zone   141712         0.9778
+         261             World Trade Center  Yellow Zone    43084         0.9777
+         224 Stuy Town/Peter Cooper Village  Yellow Zone    15486         0.9765
+         137                       Kips Bay  Yellow Zone    96407         0.9732
+          87       Financial District North  Yellow Zone    54529         0.9711
+          88       Financial District South  Yellow Zone    30662         0.9706
+           4                  Alphabet City  Yellow Zone    15460         0.9595
+          43                   Central Park  Yellow Zone   107202         0.9556
+          45                      Chinatown  Yellow Zone    15963         0.9534
+         209                        Seaport  Yellow Zone    15471         0.9350
+         232        Two Bridges/Seward Park  Yellow Zone    13562         0.9077
+         238          Upper West Side North  Yellow Zone   147488         0.8945
+         151               Manhattan Valley  Yellow Zone    67060         0.6026
+          24                   Bloomingdale  Yellow Zone    23423         0.5379
+          75              East Harlem South    Boro Zone    58241         0.5089
+         166            Morningside Heights    Boro Zone    44105         0.4476
+          74              East Harlem North    Boro Zone    32838         0.2808
+          41                 Central Harlem    Boro Zone    32156         0.2746
+         152                 Manhattanville    Boro Zone     8155         0.2494
+         244       Washington Heights South    Boro Zone     9049         0.2460
+         116               Hamilton Heights    Boro Zone     9861         0.2369
+         243       Washington Heights North    Boro Zone     1459         0.1618
+          42           Central Harlem North    Boro Zone    14912         0.1418
+         127                         Inwood    Boro Zone      805         0.1193
+
+========================================================================
+NON-MANHATTAN ZONES WITH CHARGE RATE ABOVE 20%
+(these are outside the zone but often travel into it)
+========================================================================
+ location_id                      zone_name  borough  n_trips  share_charged
+         138              LaGuardia Airport   Queens   212351         0.6342
+          93   Flushing Meadows-Corona Park   Queens     1296         0.6173
+          10                   Baisley Park   Queens     2847         0.6052
+          66             DUMBO/Vinegar Hill Brooklyn     3821         0.4829
+         157                        Maspeth   Queens      518         0.4826
+         215                  South Jamaica   Queens     1210         0.4818
+         132                    JFK Airport   Queens   226726         0.4738
+          65    Downtown Brooklyn/MetroTech Brooklyn     9971         0.4635
+          33               Brooklyn Heights Brooklyn     7778         0.4097
+          52                    Cobble Hill Brooklyn     4093         0.3765
+         130                        Jamaica   Queens     1240         0.3694
+         264                            N/A  Unknown    52899         0.3675
+         226                      Sunnyside   Queens    12090         0.3672
+         146  Long Island City/Queens Plaza   Queens     7096         0.3653
+         256      Williamsburg (South Side) Brooklyn     5446         0.3649
+          56                         Corona   Queens      607         0.3558
+          28        Briarwood/Jamaica Hills   Queens      942         0.3514
+          40                Carroll Gardens Brooklyn     3637         0.3041
+         219      Springfield Gardens South   Queens      792         0.3005
+         255      Williamsburg (North Side) Brooklyn     6318         0.2903
+         260                       Woodside   Queens     3922         0.2718
+         145 Long Island City/Hunters Point   Queens     9589         0.2379
+         223                       Steinway   Queens     3932         0.2325
+          97                    Fort Greene Brooklyn     7035         0.2252
+          25                    Boerum Hill Brooklyn     7318         0.2208
+
+========================================================================
+PROVISIONAL CONGESTION ZONE (share_charged >= 0.95)
+========================================================================
+
+46 zones:
+
+[4, 12, 13, 43, 45, 48, 50, 68, 79, 87, 88, 90, 100, 107, 113, 114, 125, 137, 140, 141, 142, 143, 144, 148, 158, 161, 162, 163, 164, 170, 186, 211, 224, 229, 230, 231, 233, 234, 236, 237, 239, 246, 249, 261, 262, 263]
+
+========================================================================
+GROUP SIZES UNDER THE CITYWIDE DESIGN
+========================================================================
+                          grp  n_trips   pct  share_charged
+  treated  (both ends inside)  5710160 72.90         0.9944
+    mixed    (one end inside)  1469456 18.76         0.9451
+control  (neither end inside)   653020  8.34         0.1338
+
+========================================================================
+CONTROL GROUP COMPOSITION (where are the untreated trips?)
+========================================================================
+      borough  n_trips   pct
+       Queens   275081 41.20
+    Manhattan   249382 37.35
+     Brooklyn    80891 12.11
+      Unknown    41319  6.19
+        Bronx    16393  2.46
+          N/A     3775  0.57
+          EWR      632  0.09
+Staten Island      265  0.04
+
+
+Done. Send me this output.

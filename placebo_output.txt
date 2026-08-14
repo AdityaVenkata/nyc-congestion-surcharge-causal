@@ -1,0 +1,56 @@
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.4' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+==========================================================================
+VERIFICATION
+==========================================================================
+statsmodels spec (B):    -0.01225
+demeaned fast path:      -0.01225
+difference:              3.93e-07
+match confirmed, proceeding
+
+==========================================================================
+PLACEBO IN TIME (pre-period only, fake treatment dates)
+==========================================================================
+the surcharge did not exist on any of these dates, so every estimate
+below should be indistinguishable from zero
+
+pre-period sample: 6,944 zone-days (2018-10-01 to 2019-02-01)
+
+     fake date     estimate      vs real
+    2018-11-01     -0.00406        0.33x
+    2018-11-15     -0.01313        1.07x
+    2018-12-01     -0.01144        0.93x
+    2018-12-15     -0.00431        0.35x
+    2019-01-01     -0.00756        0.62x
+
+real estimate (2 Feb 2019): -0.01225
+
+==========================================================================
+RANDOMISATION INFERENCE (1,000 random zone assignments)
+==========================================================================
+56 zones, reassigning 48 to treatment each draw
+  250 draws done
+  500 draws done
+  750 draws done
+  1,000 draws done
+
+placebo distribution
+  mean:                  +0.00008
+  std deviation:         0.00366
+  2.5th percentile:      -0.00768
+  97.5th percentile:     +0.00659
+
+real estimate:           -0.01225
+placebos at least as extreme: 0 of 1000
+EXACT P-VALUE:           0.0000
+clustered p-value was:   0.0212
+
+The finding survives. Randomly chosen zone assignments almost never
+produce an effect this large, so the real assignment is doing the work.
+
+chart written to figures/05_randomisation_inference.png
+
+
+Done. Send me this output and the chart.

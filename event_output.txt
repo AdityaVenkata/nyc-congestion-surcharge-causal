@@ -1,0 +1,34 @@
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.4' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+==============================================================================
+EVENT STUDY
+weeks -16 to 16, reference week -1, SEs clustered by zone
+==============================================================================
+
+Share of trips under 1 mile
+  full sample   pre -0.00963   post -0.02301   break -0.01338
+  border ring   pre -0.00318   post -0.01950   break -0.01632
+  pre-period spread (full, sd of coefs): 0.00837
+
+Mean trip distance (miles)
+  full sample   pre +0.05120   post +0.15707   break +0.10587
+  border ring   pre +0.00445   post +0.06508   break +0.06063
+  pre-period spread (full, sd of coefs): 0.07443
+
+Log daily trips
+  full sample   pre +0.04590   post -0.01027   break -0.05617
+  border ring   pre -0.01046   post -0.10937   break -0.09892
+  pre-period spread (full, sd of coefs): 0.10644
+
+Tip rate (corrected base)
+  full sample   pre -0.00354   post -0.00929   break -0.00575
+  border ring   pre +0.00127   post -0.00565   break -0.00691
+  pre-period spread (full, sd of coefs): 0.00444
+
+chart written to figures/03_event_study.png
+coefficients written to data/processed/event_study.csv
+
+
+Done. Send me this output and the chart.

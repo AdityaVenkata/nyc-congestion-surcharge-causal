@@ -1,0 +1,175 @@
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.4' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/Users/venkataaditya/anaconda3/lib/python3.11/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+already have yellow_tripdata_2018-11.parquet
+
+======================================================================
+data/raw/yellow_tripdata_2018-11.parquet
+======================================================================
+
+19 columns:
+
+  VendorID                     BIGINT
+  tpep_pickup_datetime         TIMESTAMP
+  tpep_dropoff_datetime        TIMESTAMP
+  passenger_count              DOUBLE
+  trip_distance                DOUBLE
+  RatecodeID                   DOUBLE
+  store_and_fwd_flag           VARCHAR
+  PULocationID                 BIGINT
+  DOLocationID                 BIGINT
+  payment_type                 BIGINT
+  fare_amount                  DOUBLE
+  extra                        DOUBLE
+  mta_tax                      DOUBLE
+  tip_amount                   DOUBLE
+  tolls_amount                 DOUBLE
+  improvement_surcharge        DOUBLE
+  total_amount                 DOUBLE
+  congestion_surcharge         DOUBLE
+  airport_fee                  INTEGER
+
+row count: 8,155,449
+pickup range: 2008-12-31 05:10:23  to  2019-11-21 04:51:09
+
+congestion_surcharge PRESENT
+  non-null: 2
+  charged (>0): 0
+  mean: 0.0
+
+first 2 rows:
+   VendorID tpep_pickup_datetime tpep_dropoff_datetime  passenger_count  trip_distance  RatecodeID store_and_fwd_flag  PULocationID  DOLocationID  payment_type  fare_amount  extra  mta_tax  tip_amount  tolls_amount  improvement_surcharge  total_amount  congestion_surcharge  airport_fee
+0         1  2018-11-01 00:51:36   2018-11-01 00:52:36              1.0            0.0         1.0                  N           145           145             2          2.5    0.5      0.5        0.00           0.0                    0.3          3.80                   NaN         <NA>
+1         1  2018-11-01 00:07:47   2018-11-01 00:21:43              1.0            2.3         1.0                  N           142           164             1         11.0    0.5      0.5        2.45           0.0                    0.3         14.75                   NaN         <NA>
+already have yellow_tripdata_2019-03.parquet
+
+======================================================================
+data/raw/yellow_tripdata_2019-03.parquet
+======================================================================
+
+19 columns:
+
+  VendorID                     BIGINT
+  tpep_pickup_datetime         TIMESTAMP
+  tpep_dropoff_datetime        TIMESTAMP
+  passenger_count              DOUBLE
+  trip_distance                DOUBLE
+  RatecodeID                   DOUBLE
+  store_and_fwd_flag           VARCHAR
+  PULocationID                 BIGINT
+  DOLocationID                 BIGINT
+  payment_type                 BIGINT
+  fare_amount                  DOUBLE
+  extra                        DOUBLE
+  mta_tax                      DOUBLE
+  tip_amount                   DOUBLE
+  tolls_amount                 DOUBLE
+  improvement_surcharge        DOUBLE
+  total_amount                 DOUBLE
+  congestion_surcharge         DOUBLE
+  airport_fee                  INTEGER
+
+row count: 7,866,620
+pickup range: 2002-12-31 23:02:39  to  2041-03-25 01:38:28
+
+congestion_surcharge PRESENT
+  non-null: 7,833,146
+  charged (>0): 7,154,784
+  mean: 2.2812
+
+first 2 rows:
+   VendorID tpep_pickup_datetime tpep_dropoff_datetime  passenger_count  trip_distance  RatecodeID store_and_fwd_flag  PULocationID  DOLocationID  payment_type  fare_amount  extra  mta_tax  tip_amount  tolls_amount  improvement_surcharge  total_amount  congestion_surcharge  airport_fee
+0         1  2019-03-01 00:24:41   2019-03-01 00:25:31              1.0            0.0         1.0                  N           145           145             2          2.5    0.5      0.5         0.0           0.0                    0.3           3.8                   0.0         <NA>
+1         1  2019-03-01 00:25:27   2019-03-01 00:36:37              2.0            3.7         1.0                  N            95           130             1         13.0    0.5      0.5         0.7           0.0                    0.3          15.0                   0.0         <NA>
+
+======================================================================
+taxi_zone_lookup.csv
+======================================================================
+
+265 zones total
+
+      Borough  n
+    Manhattan 69
+       Queens 69
+     Brooklyn 61
+        Bronx 43
+Staten Island 20
+      Unknown  1
+          EWR  1
+          N/A  1
+
+Manhattan zones:
+ LocationID                                          Zone service_zone
+          4                                 Alphabet City  Yellow Zone
+         12                                  Battery Park  Yellow Zone
+         13                             Battery Park City  Yellow Zone
+         24                                  Bloomingdale  Yellow Zone
+         41                                Central Harlem    Boro Zone
+         42                          Central Harlem North    Boro Zone
+         43                                  Central Park  Yellow Zone
+         45                                     Chinatown  Yellow Zone
+         48                                  Clinton East  Yellow Zone
+         50                                  Clinton West  Yellow Zone
+         68                                  East Chelsea  Yellow Zone
+         74                             East Harlem North    Boro Zone
+         75                             East Harlem South    Boro Zone
+         79                                  East Village  Yellow Zone
+         87                      Financial District North  Yellow Zone
+         88                      Financial District South  Yellow Zone
+         90                                      Flatiron  Yellow Zone
+        100                              Garment District  Yellow Zone
+        103 Governor's Island/Ellis Island/Liberty Island  Yellow Zone
+        104 Governor's Island/Ellis Island/Liberty Island  Yellow Zone
+        105 Governor's Island/Ellis Island/Liberty Island  Yellow Zone
+        107                                      Gramercy  Yellow Zone
+        113                       Greenwich Village North  Yellow Zone
+        114                       Greenwich Village South  Yellow Zone
+        116                              Hamilton Heights    Boro Zone
+        120                               Highbridge Park    Boro Zone
+        125                                     Hudson Sq  Yellow Zone
+        127                                        Inwood    Boro Zone
+        128                              Inwood Hill Park    Boro Zone
+        137                                      Kips Bay  Yellow Zone
+        140                               Lenox Hill East  Yellow Zone
+        141                               Lenox Hill West  Yellow Zone
+        142                           Lincoln Square East  Yellow Zone
+        143                           Lincoln Square West  Yellow Zone
+        144                           Little Italy/NoLiTa  Yellow Zone
+        148                               Lower East Side  Yellow Zone
+        151                              Manhattan Valley  Yellow Zone
+        152                                Manhattanville    Boro Zone
+        153                                   Marble Hill    Boro Zone
+        158                 Meatpacking/West Village West  Yellow Zone
+        161                                Midtown Center  Yellow Zone
+        162                                  Midtown East  Yellow Zone
+        163                                 Midtown North  Yellow Zone
+        164                                 Midtown South  Yellow Zone
+        166                           Morningside Heights    Boro Zone
+        170                                   Murray Hill  Yellow Zone
+        186                  Penn Station/Madison Sq West  Yellow Zone
+        194                               Randalls Island  Yellow Zone
+        202                              Roosevelt Island    Boro Zone
+        209                                       Seaport  Yellow Zone
+        211                                          SoHo  Yellow Zone
+        224                Stuy Town/Peter Cooper Village  Yellow Zone
+        229                 Sutton Place/Turtle Bay North  Yellow Zone
+        230                     Times Sq/Theatre District  Yellow Zone
+        231                          TriBeCa/Civic Center  Yellow Zone
+        232                       Two Bridges/Seward Park  Yellow Zone
+        233                           UN/Turtle Bay South  Yellow Zone
+        234                                      Union Sq  Yellow Zone
+        236                         Upper East Side North  Yellow Zone
+        237                         Upper East Side South  Yellow Zone
+        238                         Upper West Side North  Yellow Zone
+        239                         Upper West Side South  Yellow Zone
+        243                      Washington Heights North    Boro Zone
+        244                      Washington Heights South    Boro Zone
+        246                     West Chelsea/Hudson Yards  Yellow Zone
+        249                                  West Village  Yellow Zone
+        261                            World Trade Center  Yellow Zone
+        262                                Yorkville East  Yellow Zone
+        263                                Yorkville West  Yellow Zone
+
+
+Done. Send me this output.
